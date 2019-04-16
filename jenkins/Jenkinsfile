@@ -8,7 +8,16 @@ pipeline {
     environment {
         CI = 'true'
     }
+    tools {
+        jdk 'jdk8'
+    }
     stages {
+        stage('test java installation') {
+            steps {
+                sh 'java -version'
+                sh 'which java'
+            }
+        }
         stage('Sonarqube') {
             environment {
                 scannerHome = tool 'SonarQubeScanner'
