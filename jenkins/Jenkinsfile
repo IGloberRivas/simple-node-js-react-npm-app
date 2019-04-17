@@ -7,7 +7,6 @@ pipeline {
         stage('test java installation') {
             steps {
                 bat 'java -version'
-                bat 'which java'
             }
         }
     }
