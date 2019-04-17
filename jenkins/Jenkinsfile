@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('test java installation') {
             steps {
-                sh 'java -version'
-                sh 'which java'
+                bat 'java -version'
+                bat 'which java'
             }
         }
     }
